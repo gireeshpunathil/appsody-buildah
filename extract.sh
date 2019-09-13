@@ -11,4 +11,4 @@ appsody extract --buildah --target-dir $path_to_context
 # Compose and push the image to the registry
 cd $path_to_context
 imageid=`buildah bud --format=docker -t $image .`
-buildah push --tls-verify=false $imageid $image
+buildah push --tls-verify=false $imageid docker://$image
